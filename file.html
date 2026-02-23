@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking in Gujarat</title>
+    <style>
+        body { font-family: Arial; margin: 0; padding: 0; background: #f5f5f5; }
+        header { background: #FF5722; color: white; padding: 25px; text-align: center; }
+        h1 { margin: 0; }
+        .cities { display: flex; flex-wrap: wrap; justify-content: center; margin: 20px; }
+        .city-card { background: white; margin: 15px; padding: 10px; border-radius: 10px; width: 250px; box-shadow: 0 2px 8px rgba(0,0,0,0.2); text-align: center; transition: transform 0.2s; }
+        .city-card:hover { transform: scale(1.05); }
+        .city-card img { width: 100%; border-radius: 10px; }
+        .city-card h3 { margin: 10px 0 5px 0; }
+        .city-card p { color: #555; }
+        .registration { background: white; max-width: 450px; margin: 40px auto; padding: 25px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+        .registration h2 { text-align: center; margin-bottom: 20px; }
+        .registration form { display: flex; flex-direction: column; }
+        .registration input, .registration select { margin: 10px 0; padding: 12px; border-radius: 6px; border: 1px solid #ccc; }
+        .registration button { background: #FF5722; color: white; padding: 12px; border: none; border-radius: 6px; cursor: pointer; font-size: 16px; }
+        .registration button:hover { background: #e64a19; }
+        footer { text-align: center; padding: 15px; background: #333; color: white; margin-top: 30px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hotel Booking in Gujarat</h1>
+        <p>Book hotels in Baroda, Surat, Rajkot, and Gandhinagar</p>
+    </header>
+
+    <section class="cities">
+        <div class="city-card">
+            <img src="/assets/h.avif" alt="Baroda Hotel">
+            <h3>Baroda</h3>
+            <p>Comfortable stays in Baroda</p>
+        </div>
+        <div class="city-card">
+            <img src="/assets/y.avif" alt="Surat Hotel">
+            <h3>Surat</h3>
+            <p>Luxury hotels in Surat</p>
+        </div>
+        <div class="city-card">
+            <img src="/assets/v.avif" alt="Rajkot Hotel">
+            <h3>Rajkot</h3>
+            <p>Budget-friendly stays in Rajkot</p>
+        </div>
+        <div class="city-card">
+            <img src="/assets/r.avif" alt="Gandhinagar Hotel">
+            <h3>Gandhinagar</h3>
+            <p>Comfort and luxury in Gandhinagar</p>
+        </div>
+    </section>
+
+    <section class="registration">
+        <h2>Book Your Stay</h2>
+        <form id="bookingForm">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <select required>
+                <option value="">Select City</option>
+                <option value="Baroda">Baroda</option>
+                <option value="Surat">Surat</option>
+                <option value="Rajkot">Rajkot</option>
+                <option value="Gandhinagar">Gandhinagar</option>
+            </select>
+            <input type="date" required>
+            <button type="submit">Book Now</button>
+        </form>
+    </section>
+
+    <footer>
+        &copy; 2026 Hotel Booking Gujarat. All rights reserved.
+    </footer>
+
+    <script>
+        const form = document.getElementById('bookingForm');
+        form.addEventListener('submit', function(e){
+            e.preventDefault();
+            alert('Thank you for booking! We will contact you shortly.');
+            form.reset();
+        });
+    </script>
+</body>
+</html>
